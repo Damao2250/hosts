@@ -28,6 +28,7 @@
 1. + 粘贴到对应目录下，替换原来的hosts（最好备份原来的hosts） 
 
 2.  + Windows：使用快捷键 `win + r` 打开运行窗口，然后输入 `cmd`, 回车, 输入：`ipconfig /flushdns`, 回车, 即可刷新hosts文件
-    + Mac： `sudo killall -HUP mDNSResponder`
+    + Mac： 使用 Root 权限：`sudo vi /etc/hosts` 编辑hosts, 然后  `sudo killall -HUP mDNSResponder`
+    + Linux: 使用 Root 权限：`sudo vi /etc/hosts` 编辑hosts, 然后  `sudo rcnscd restart`
     + 其他平台, 暂无测试。
 
